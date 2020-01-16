@@ -1,24 +1,3 @@
-"""
-Registration of a user 0 token
-Each user gets 5 tokens
-Store sentance on our database for 1 token
-And retrive Your sentance From our databade in 1 token
-
-"""
-
-from flask import Flask, jsonify, request
-from flask_restful import Api, Resource
-from pymongo import MongoClient
-
-app = Flask(__name__)
-api = Api(app)
-
-client = MongoClient("mongodb://db:27017")
-db = client.SentanceDatabase
-User = db['User']
-
-
-"""
 from flask import Flask, jsonify, request
 from flask_restful import Api, Resource
 from pymongo import MongoClient
@@ -161,4 +140,3 @@ def index():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
-"""
